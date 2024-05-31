@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+        <a href="/new">New Message</a>
+
+        <% for(let msg of messages) {%>
+            <div>
+                Message: <%= msg.text %><br>
+                User: <%= msg.user %><br>
+                Added: <%= msg.added %>
+            </div><br>
+        <% } %>
+    </body>
+</html>
